@@ -64,13 +64,13 @@ const dogs = [
   console.log(`${dog.name} is a ${dog.breed}`)
 };
 */
-for(const dog of dogs){
-  if(dog.goodBoy=== true) {
-    console.log(`${dog.name} is a good dog.`)
-  } else {
-    console.log(`${dog.name} is a bad dog.`)
-  }; 
-}
+// for(const dog of dogs){
+//   if(dog.goodBoy=== true) {
+//     console.log(`${dog.name} is a good dog.`)
+//   } else {
+//     console.log(`${dog.name} is a bad dog.`)
+//   }; 
+// }
 /*
 for(let i=0; i<dogs.length; i++){
   console.log(`${dogs[i].name} is a ${dogs[i].breed}`);
@@ -87,11 +87,11 @@ let newDog ={
     goodBoy: false,
     age: 27
 }
-dogs.push(newDog) //add newDog to the array
+// dogs.push(newDog) //add newDog to the array
 
-for(const dog of dogs){
-  console.log(`${dog.name} is a ${dog.breed}`)
-}
+// for(const dog of dogs){
+//   console.log(`${dog.name} is a ${dog.breed}`)
+// }
 
 
 // let's change the age of the dogs
@@ -117,14 +117,24 @@ const nextDog = {
     age: 75
 }
 
-const addNewDog = (dogObject) => {
-  const lastIndex = dogs.length -1;
-  const currentLastDog = dogs[lastIndex];
-  const maxId = currentLastDog.id;
-  const idForNewDog = maxId +1
-  dogObject.id = idForNewDog
-  dogs.push(dogObject)
-}
-addNewDog(nextDog);
+// const addNewDog = (dogObject) => {
+//   const lastIndex = dogs.length -1;
+//   const currentLastDog = dogs[lastIndex];
+//   const maxId = currentLastDog.id;
+//   const idForNewDog = maxId +1
+//   dogObject.id = idForNewDog
+//   dogs.push(dogObject)
+// }
+// addNewDog(nextDog);
 
-console.log(dogs)
+// console.log(dogs)
+
+const handleClickEvent = event => {
+
+}
+// const button = document.querySelector('button');
+const buttons = document.querySelectorAll('button')
+
+for (const button of buttons) {
+  button.addEventListener('click', handleClickEvent);
+}
